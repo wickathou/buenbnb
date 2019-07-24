@@ -14,7 +14,24 @@
   height: 100vh;
 }
 
+body{
+  height: 2000px;
+}
 
 #navbar {
   position: fixed;
+  right: 5%;
+  top:5%;
+}
+
+.horizontal-list{
+  display: flex;
+}
+
+li {
+  margin: 15px 10px;
+  padding: 5%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 2px #727272;
+  background: #cccccc
 }
