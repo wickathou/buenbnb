@@ -97,8 +97,10 @@ body{
 
 #github > a {
   padding: 24px;
-  background: #727272;
+  background: #cccccc;
   margin-left: 16px;
   color: #FFF;
   text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 2px #727272;
 }
