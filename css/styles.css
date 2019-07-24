@@ -12,7 +12,7 @@
 
 /* all height - viewport */
 #welcome-section {
-  height: 100vh;
+  height: 30vh;
 }
 
 
@@ -37,4 +37,31 @@ li {
 li > a {
   color: #FFF;
   text-decoration: none;
+}
+
+body{
+  position: relative;
+}
+
+.project-title{
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  margin: 2%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 2px #727272;
+  background: #cccccc;
+}
+
+@media (max-width:800px) {
+  #navbar {
+    left:1%;
+    top: 1%;
+  }
+  #welcome-section {
+    height: auto;
+    margin-top: 30px;
+  }
+
+
 }
