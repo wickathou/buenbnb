@@ -1,42 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="FCCtest" href="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
-  <link rel="stylesheet" href="./css/styles.css">
-  <title>MicroverseJS Portfolio</title>
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Youtube</title>
 </head>
 <body>
-  
+    <!-- Navbar -->
+    <nav class="search-bar side-padding-2em debug" >
+        
+        <div class="left search-bar-alignment debug">
+            <img class='margin-horizontal' id="search-bar-menuimg" src="images/menu.png" alt="site images">
+            <img class='margin-horizontal logo' id="logo" src="images/youtube_logo.png" alt="site images">
+        </div>
 
-  <nav id="navbar">
-    <ul class="horizontal-list">
-      <li><a href="#welcome-section">Welcome</a></li>
-      <li><a href="#projects">My Projects</a></li>
-      <li><a href="#profile-link">My Github</a></li>
-    </ul>
-  </nav>
+        <div class="center search-bar-alignment debug">
+                <form id="search-container" class="search-bar-alignment">
+                    <input type="text" name="search" id="search-input" placeholder="Search">
+                    <button id="search-button"><img class="small-icon" src="images/search.svg" alt="site images"></button>
+                </form>
+        </div>
+        <div class="right search-bar-alignment debug">
+            <img class='margin-horizontal' id="upload-icon" src="images/upload.svg" alt="site images">
+            <button class='margin-horizontal' id="signin-button">Sign in</button>
+        </div>
+    </nav>
+    
+    <main class="margin-content-body">
+        <!-- spacer -->
+        <div class="margin-responsive spacer-top" ></div>
+        <!-- Video display -->
+        <section class="video display debug">
+            <iframe id="video-container" src="https://www.youtube.com/embed/ed8SzALpx1Q" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <!-- Video summary -->
+        <div class="margin-responsive video margin-vertical heigth-fill summary debug">
+            <div class="info-container">
+                <h1 class="font-1-8em lineheight-2-4em">Video title</h1>
+                <div class="info-container-text responsive-container  font-1em">
+                    <div class="info-container-text responsive-container">
+                        <div>100,000 views</div>
+                        <div class="hide-block-summary"> • Published on 27 Feb 2020</div>
+                    </div>
+                    <div id="user-interaction">
+                        <div class="main-details-container align-items-center">
+                            <div><img class='heigth-1em side-padding-1em' src="./images/thumb-up-button.svg" alt="site images">16K</div>
+                            <div><img class='heigth-1em side-padding-1em' src="./images/thumb-down-button.svg" alt="site images">1K</div>
+                            <div><img class='heigth-1em side-padding-1em' src="./images/share.svg" alt="site images">SHARE</div>
+                            <div><img class='heigth-1em side-padding-1em' src="./images/add-plus-button.svg" alt="site images">SAVE</div>
+                            <div><img class='heigth-1em side-padding-1em' src="./images/ellipsis.svg" alt="site images"></div>
+                        </div>
+                    </div>
+                </div>
 
-  <section id="welcome-section">
-    <h1 class="welcome-section-text">
-      Welcome to my portafolio.
-    </h1>
-  </section>
-  <section id="projects">
-    <div class="project-tile">Project a<a href="#"></a></div>
-    <div class="project-tile">Project b<a href="#"></a></div>
-    <div class="project-tile">Project c<a href="#"></a></div>
-  </section>
+            </div>
 
-  <section id="github">
-    <a href="https://github.com/wickathou/" id="profile-link" target="_blank">Javier</a>
-    <a href="https://github.com/SantiagoGuerra" target="_blank">Santiago</a>
-  </section>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        </div>
+        <!-- Video details -->
+        <div class="margin-responsive video margin-vertical  details debug">
+            <div class="main-details-container heigth-fill margin-top width-fill debug">
+            <div class="details-container details-container-left debug">
+                    <button class="user-picture">V</button>
+            </div>
+            <div class="details-container details-container-right debug">
+                <div class="heigth-fill debug">
+                        <div class="debug">
+                            <div class="info-container-text debug">
+                                <div>
+                                    <p class="font-bold font-1-4em">Strategic</p>
+                                    <p class="font-gray font-1-3em">56k subscribers</p>
+                                </div>
+                                <button id="subscribe-bottom">Subscribe</button>
+                            </div>
+                        </div>
+                        <div class="heigth-responsive-60px overflow debug">
+                            Description <br>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate porro consequuntur temporibus obcaecati nemo suscipit cumque tempora aliquid dignissimos numquam deserunt doloribus, libero non voluptate delectus, quam placeat voluptates odio.
+                        </div>
+                        <div id="details-read-more"><a class="font-1-3em" href="#">Show more</a></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Video comments -->
+        <div class="margin-responsive video comments debug">
+            <div class="main-details-container">
+                <div id="comment-amount" class="font-1-6em debug">56 Comments</div>
+                <div id='comment-sorting' class="font-1-4em debug"><img class='small-icon' src="images/sort-button-with-three-lines.svg" alt="site images" > SORT BY</div>
+            </div>
+            <div class="main-details-container ">
+                <div class="details-container details-container-left debug">
+                    <button class="comment-picture comment-picture-color5">Icon</button>
+            </div>
+                <div class="font-1-4em details-container-right debug"><input type="text" placeholder="Comments">
+                </div>
+            </div>
+            
+            <!-- comment blocks  starts      -->
+            <div class="main-details-container margin-vertical">
+                <div class="details-container details-container-left debug">
+                    <button class="comment-picture comment-picture-color1">Icon</button>
+            </div>
 
+                <div class="details-container-right debug">
+                    <div class="font-1-3em main-details-container debug">
+                        <div class="font-bold width-fit-content debug">Name</div>
+                        <div class=" font-gray width-fit-content debug">1 hour ago</div>
+                    </div>
+
+                    <div class="main-details-container debug">
+                        <div class="font-1-4em comment-area width-fill debug">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At suscipit mollitia illo? Velit maxime hic voluptatibus illum quam, ipsam error voluptas earum nam aspernatur itaque modi, sunt fugiat. Beatae, ex?</div>
+                    </div>
+
+                    <div class="font-1-3em font-gray main-details-container debug ">
+                        <div class="width-3vw debug min-width-4em"><img class="small-icon" src="images/thumb-up-button.svg" alt="site images" >56</div>
+                        <div class="width-2vw icons-padding min-width-4em debug"><img class="small-icon" src="images/thumb-down-button.svg" alt="site images" ></div>
+                        <div class="width-4vw icons-padding min-width-4em debug">REPLY</div>
+                    </div>
+
+                    <div class="main-details-container debug">
+                        <div class="width-fit-content font-1-3em font-gray debug"><strong>Hide reply</strong></div>
+                        <div class="width-2vw debug"><img class=" small-icon" src="images/down-arrow.svg" alt="site images" ></div>
+                    </div>
+
+                        <!-- Reply comment start  -->
+                                <div class="main-details-container margin-vertical">
+                                    <div class="details-container details-container-left debug">
+                                        <button class="comment-picture comment-picture-color2">Icon</button>
+                                    </div>
+                                    
+                                    <div class="details-container-right debug">
+                                        <div class="font-1-3em main-details-container debug">
+                                            <div class="font-bold width-fit-content debug">Name</div>
+                                            <div class=" font-gray width-fit-content debug">3 hours ago</div>
+                                        </div>
+                                        
+                                        <div class="main-details-container debug">
+                                            <div class="font-1-4em comment-area width-fill debug">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo accusantium vero, culpa necessitatibus iure, eligendi omnis non suscipit laudantium quia voluptas, amet nemo? Labore sapiente animi nulla explicabo reiciendis? Perferendis.</div>
+                                        </div>
+
+                                        <div class="font-1-3em font-gray main-details-container debug ">
+                                            <div class="width-3vw debug min-width-4em"><img class="small-icon" src="images/thumb-up-button.svg" alt="site images" >56</div>
+                                            <div class="width-2vw icons-padding min-width-4em debug"><img class="small-icon" src="images/thumb-down-button.svg" alt="site images" ></div>
+                                            <div class="width-4vw icons-padding min-width-4em debug">REPLY</div>
+                                        </div>
+                                        
+                                        <div class="main-details-container debug">
+                                            <div class="width-fit-content font-1-3em font-gray debug">View reply</div>
+                                            <div class="width-2vw debug"><img class=" small-icon" src="images/down-arrow.svg" alt="site images" ></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                        <!-- Reply comment end  -->
+
+                </div>
+            </div>
+            <!-- comment block ends -->
+            <div class="main-details-container margin-vertical">
+                <div class="details-container details-container-left debug">
+                    <button class="comment-picture comment-picture-color1">Icon</button>
+                </div>
+            
+                <div class="details-container-right debug">
+                    <div class="font-1-3em main-details-container debug">
+                        <div class="font-bold width-fit-content debug">Name</div>
+                        <div class=" font-gray width-fit-content debug">3 weeks ago</div>
+                    </div>
+            
+                    <div class="main-details-container debug">
+                        <div class="font-1-4em comment-area width-fill debug">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora error eveniet perspiciatis, enim eius doloribus sunt. Odit doloremque libero exercitationem ullam. Voluptate consequuntur porro, adipisci sunt aspernatur obcaecati eius? Qui? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio itaque ipsum sit porro nesciunt eveniet nobis aspernatur ex. Dolores sed, sint eligendi doloremque voluptatum corrupti esse cupiditate dolor tempore! Saepe!</div>
+                    </div>
+            
+                    <div class="font-1-3em font-gray main-details-container debug ">
+                        <div class="width-3vw debug min-width-4em"><img class="small-icon" src="images/thumb-up-button.svg" alt="site images" >56</div>
+                        <div class="width-2vw icons-padding min-width-4em debug"><img class="small-icon" src="images/thumb-down-button.svg" alt="site images" ></div>
+                        <div class="width-4vw icons-padding min-width-4em debug">REPLY</div>
+                    </div>
+                    <div class="main-details-container debug">
+                        <div class="width-fit-content font-1-3em font-gray debug">View reply</div>
+                        <div class="width-2vw debug"><img class=" small-icon" src="images/down-arrow.svg" alt="site images" ></div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="main-details-container margin-vertical">
+                <div class="details-container details-container-left debug">
+                    <button class="comment-picture comment-picture-color1">Icon</button>
+                </div>
+            
+                <div class="details-container-right debug">
+                    <div class="font-1-3em main-details-container debug">
+                        <div class="font-bold width-fit-content debug">Name</div>
+                        <div class=" font-gray width-fit-content debug">1 month ago</div>
+                    </div>
+            
+                    <div class="main-details-container debug">
+                        <div class="font-1-4em comment-area width-fill debug">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eaque fuga iusto soluta numquam, eius ea optio nemo debitis voluptatum minima tenetur, magnam iure rerum nisi. Recusandae alias quidem voluptatem.</div>
+                    </div>
+            
+                    <div class="font-1-3em font-gray main-details-container debug ">
+                        <div class="width-3vw debug min-width-4em"><img class="small-icon" src="images/thumb-up-button.svg" alt="site images" >86</div>
+                        <div class="width-2vw icons-padding min-width-4em debug"><img class="small-icon" src="images/thumb-down-button.svg" alt="site images" ></div>
+                        <div class="width-4vw icons-padding min-width-4em debug">REPLY</div>
+                    </div>
+                    <div class="main-details-container debug">
+                        <div class="width-fit-content font-1-3em font-gray debug">View reply</div>
+                        <div class="width-2vw debug"><img class=" small-icon" src="images/down-arrow.svg" alt="site images" ></div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        <!-- Video related -->
+        <!-- Related header starts -->
+        <aside class="margin-responsive sidebar margin-aside debug">
+            <div class="info-container-text debug">
+                <div class="font-1-6em debug">Up next</div>
+                <div class="font-1-3em font-gray main-details-container align-items-center debug">Autoplay
+                    <img class="width-4em side-padding-1em" src="images/application-shift.svg" alt="site images" >
+                </div>
+            </div>
+            <!-- Related header ends -->
+
+            <!-- video related  -->
+            <div class="main-details-container margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer" 
+                    alt="Site images" src="https://picsum.photos/id/726/400/200"> 
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">50k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+
+            <!-- video related ends  -->
+
+            <div class="spacer-bottom margin-vertical debug"></div>
+
+            <div class="main-details-container margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer"
+                        alt="Site images" src="https://picsum.photos/id/728/400/200">
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">Lorem ipsum</div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">50k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+
+            <div class="main-details-container margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer"
+                        alt="Site images" src="https://picsum.photos/id/717/400/200">
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">Lorem ipsum dolor sit amet</div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">87k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+
+            <div class="main-details-container margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer"
+                        alt="Site images" src="https://picsum.photos/id/704/400/200">
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">Lorem ipsum dolor sit amet consectetur
+                        </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">06k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+
+            <div class="main-details-container hide-block margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer"
+                        alt="Site images" src="https://picsum.photos/id/16/400/200">
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">Lorem ipsum dolor sit amet consectetur,
+                        adipisicing</div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">10k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+
+            <div class="main-details-container hide-block margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer"
+                        alt="Site images" src="https://picsum.photos/id/715/400/200">
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">Lorem ipsum 2</div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">55k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+
+            <div class="main-details-container hide-block margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer"
+                        alt="Site images" src="https://picsum.photos/id/127/400/200">
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">Lorem ipsum 3</div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">35k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+
+            <div class="main-details-container hide-block margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer"
+                        alt="Site images" src="https://picsum.photos/id/227/400/200">
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">Lorem 2</div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">25k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+
+            <div class="main-details-container hide-block margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer"
+                        alt="Site images" src="https://picsum.photos/id/327/400/200">
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">LL KK</div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">12k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+
+            <div class="main-details-container hide-block margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer"
+                        alt="Site images" src="https://picsum.photos/id/427/400/200">
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">Lorem ipsum dolor</div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">87k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+
+            <div class="main-details-container hide-block margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer"
+                        alt="Site images" src="https://picsum.photos/id/527/400/200">
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">Dolor</div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">14k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+
+            <div class="main-details-container hide-block margin-vertical debug">
+                <div class="details-container sidebar-left debug">
+                    <img class="sidebar-thumbnail style-scope ytd-moving-thumbnail-renderer"
+                        alt="Site images" src="https://picsum.photos/id/627/400/200">
+                </div>
+                <div class="details-container sidebar-right debug">
+                    <div class="max-heigth-2-6em font-1-4em font-bold overflow-hidden debug">Lorem LOL</div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug">Lorem ipsum dolor </div>
+                    <div class="heigth-1-6em font-1-3em font-gray overflow-hidden debug ">59k views</div>
+                    <div class="heigth-1-6em overflow-hidden debug font-1-3em font-gray max-width">NEW</div>
+                </div>
+            </div>
+            
+
+        </aside>
+        <!-- Spacer -->
+        <div class="margin-responsive spacer-bottom"></div>
+    </main>
+    <!-- Footer read more -->
+    <div id="footer-read-more"><a class="font-1-3em" href="#">Show more</a></div>
+    <!-- Footer desktop -->
+    <footer class="footer side-padding-2em debug">
+        <div class="footer-container debug">
+            <div class="main-details-container heigth-4em align-items-center debug">
+                    <img class="logo" src="images/youtube_logo.png" alt="site images">
+                    <div>
+                        <ul class="main-details-container">
+                            <li class="margin-horizontal debug">
+                                <div>
+                                    <span><img class="small-icon" src="images/translate.svg" alt="site images"></span>
+                                    <span>Language:English</span>
+                                    <span><img src="images/down-arrow_2.svg" class="small-icon" alt="site images" ></span>
+                                </div>
+                            </li>
+                            <li class="margin-horizontal debug">
+                                <div>
+                                    <span>Location:Ecuador</span>
+                                    <span><img src="images/down-arrow_2.svg" class="small-icon" alt="site images" ></span>
+                                </div>
+                            </li>
+                            <li class="margin-horizontal debug">
+                                <div>
+                                    <span>Restricted Mode:Off</span>
+                                    <span><img src="images/down-arrow_2.svg" class="small-icon" alt="site images" ></span>
+                                </div>
+                            </li>
+                            <li class="margin-horizontal debug">
+                                    <div class="margin-horizontal">
+                                            <a class="main-details-container debug" href=".">
+                                                <span> 
+                                                    <img class="small-icon" src="images/sand-clock.svg" alt="site images">
+                                                 </span>
+                                                <span>History</span>                            
+                                            </a>
+                                        </div>
+                                        
+                            </li>
+                            <li class="margin-horizontal debug">
+                                    <div class="margin-horizontal">
+                                            <a class="main-details-container debug" href=".">
+                                                <span><img class="small-icon" src="images/help.svg" alt="site images"></span>
+                                                <span>Help</span>                            
+                                            </a>
+                                        </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                
+
+            </div>
+
+            <div class="spacer-bottom margin-vertical debug"></div>
+
+            <div class="heigth-2em debug">
+                <div>
+                    <ul class="footer">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Copyright</a></li>
+                        <li><a href="#">Creators</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Developers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="heigth-2em debug">
+                <div>
+                    <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Policy & Safety</a></li>
+                        <li><a href="#">Test new features</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
