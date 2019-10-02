@@ -98,6 +98,145 @@ body{
     color: white;
 }
 
+/* Input styling */
+input[type=submit] {
+    border: none;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 30px;
+    background: #2F50E3;
+    color: white;
+}
+
+/* Modal box styling */
+#booking-form {
+    display: flex;
+    justify-content: center;
+}
+
+.justify-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-box {
+    background: #66666638;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.booking-information {
+    padding: 0% 1%;
+    margin: 2% 1%;
+    min-width: 30%;
+}
+
+.booking-information p{
+    margin: 2% 0%;
+}
+
+.booking-information input {
+    width: 100%
+}
+
+
+.modal-content {
+    background: #F8F8F8;
+    position: relative;
+    height: 80%;
+    padding: 10px;
+    margin: 1% 10%;
+    overflow: scroll;
+}
+
+#book-modal {
+    display: none;
+}
+
+#modal-close {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    padding: 1em;
+}
+
+#modal-close:hover {
+    color: #2F50E3;
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+#instant-quotation {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.quote-box {
+    min-width: 50%;
+    height: fit-content;
+    padding: 1% 1%;
+    margin: 2% 1%;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+#calculator-input {
+    min-width: 40%;
+}
+
+#calculator-input select {
+    width: 80%;
+}
+
+.amount-box {
+    padding: 0% 1%;
+    margin: 2% 1%;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+#quoted-amount {
+    min-width: 40%;
+    min-height: fit-content;
+    align-self: center;
+}
+
+#pricing-display {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+/* Town/city selector in Modal */
+
+#town-selector{
+    display: none;
+}
+
+#colombia{
+    display: none;
+}
+
+#ecuador{
+    display: none;
+}
+
+#mexico{
+    display: none;
+}
+
+#us{
+    display: none;
+}
+
 /* Nav bar styling */
 .navigation{
     display: grid;
@@ -125,15 +264,23 @@ body{
     /* margin: 0 2em; */
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .nav-item {
-    padding: 0 0.2em;
+    padding: 0 0.5em;
     margin: 0 0.2em;
     /* border: 1px solid black; */
     min-width: 115px;
     text-align: center;
+}
+
+.nav-item:hover {
+    color: #2F50E3;
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -141,7 +288,7 @@ body{
 
 .content{
     margin: 0 5%;
-    min-width: 450px;
+    min-width: 380px;
 }
 
 /* Grid for header area*/
@@ -400,5 +547,16 @@ body{
     }
     .bottom-content{
         min-height: 450px;
+    }
+    #instant-quotation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    }
+    #booking-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     }
 }
