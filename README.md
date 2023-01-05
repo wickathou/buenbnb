@@ -8,3 +8,5 @@ Features:
 - JS price calculator
 
 Hope you like it! 😎
+
+[live site](https://wickathou.github.io/buenbnb)
